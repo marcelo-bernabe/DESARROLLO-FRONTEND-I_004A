@@ -1,0 +1,216 @@
+:root {
+    --fuenteprincipal: "Arial", sans-serif;
+    --fuenteheader: "Papyrus", fantasy;
+    --colorfondo: #f0f8ff;
+    --colortexto: #2c3e50;
+    --color-texto-claro: white;
+    --colorheader: #1e90ff;
+    --colorfooter: #2c3e50;
+    --colorproducto: #ffffff;
+    --colorsombra: rgba(0,0,0,0.1);
+}
+
+/* Reset básico y box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuenteprincipal);
+    background-color: var(--colorfondo);
+    color: var(--colortexto);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Estilos del header */
+header {
+    font-family: var(--fuenteheader);
+    color: var(--color-texto-claro);
+    text-align: center;
+    width: 100%;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    background-color: var(--colorheader);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--colorsombra);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* Estilos de la navegación */
+nav {
+    background-color: var(--colorfooter);
+    padding: 12px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--colorsombra);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--colorheader);
+    transform: scale(1.05);
+}
+
+/* Estilos de la sección principal */
+section {
+    background-color: var(--colorproducto);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--colorsombra);
+    border: 1px solid #e0e0e0;
+}
+
+section h2 {
+    color: var(--colorheader);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--colorheader);
+    font-size: 1.8rem;
+}
+
+/* Estilos de la lista de productos */
+section ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Selector avanzado: nth-child para alternar estilos */
+section ul li:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+section ul li:nth-child(even) {
+    background-color: #e8f4fd;
+}
+
+/* Estilos de cada producto */
+section ul li {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+section ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--colorsombra);
+    border-color: var(--colorheader);
+}
+
+section ul li p {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--colortexto);
+}
+
+/* Estilos para las imágenes */
+section ul li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+section ul li img:hover {
+    border-color: var(--colorheader);
+    transform: scale(1.02);
+}
+
+/* Estilos del footer */
+footer {
+    background-color: var(--colorfooter);
+    color: var(--color-texto-claro);
+    padding: 25px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px var(--colorsombra);
+}
+
+footer p {
+    margin: 5px 0;
+    padding: 3px 0;
+}
+
+/* Selector avanzado: primer párrafo del footer con estilo especial */
+footer p:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #90caf9;
+}
+
+/* Selector avanzado: último párrafo del footer */
+footer p:last-child {
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Estilos para la descripción de la tienda */
+body > p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: var(--colortexto);
+    background-color: var(--colorproducto);
+    border-radius: 8px;
+    border-left: 4px solid var(--colorheader);
+}
+
+/* Media query para responsividad */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    header {
+        font-size: 1.8rem;
+        padding: 20px 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    section ul {
+        grid-template-columns: 1fr;
+    }
+    
+    section ul li {
+        padding: 15px;
+    }
+}
