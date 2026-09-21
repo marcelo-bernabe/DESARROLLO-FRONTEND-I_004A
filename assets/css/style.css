@@ -1,0 +1,11 @@
+/* Estilos personalizados complementarios a Bootstrap 5 */
+:root { --color-primario: #1e90ff; --color-oscuro: #2c3e50; }
+body { background-color: #f0f8ff; color: var(--color-oscuro); }
+.hero { background: var(--color-primario); color: #fff; font-family: "Papyrus", fantasy; letter-spacing: 2px; }
+.navbar-tienda { background-color: var(--color-oscuro); }
+.card-producto { transition: transform .3s, box-shadow .3s; }
+.card-producto:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,.15); }
+.card-producto img { height: 200px; object-fit: cover; }
+footer { background-color: var(--color-oscuro); color: #fff; }
+footer a { color: #90caf9; }
+#carrito-resumen { position: sticky; top: 1rem; }

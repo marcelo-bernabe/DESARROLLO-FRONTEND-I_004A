@@ -1,0 +1,6 @@
+[
+  { "id": 1, "nombre": "GTA VI", "plataforma": "PlayStation", "precio": 99, "imagen": "assets/img/GTA6.png", "descripcion": "GTA VI para PlayStation 5" },
+  { "id": 2, "nombre": "Spider-Man Miles Morales", "plataforma": "PlayStation", "precio": 59, "imagen": "assets/img/SP.jpg", "descripcion": "Spider-Man Miles Morales para PlayStation 5" },
+  { "id": 3, "nombre": "Halo Infinite", "plataforma": "Xbox", "precio": 49, "imagen": "assets/img/halo.jpg", "descripcion": "Halo Infinite para Xbox" },
+  { "id": 4, "nombre": "Zelda Tears of the Kingdom", "plataforma": "Nintendo", "precio": 69, "imagen": "assets/img/zelda.avif", "descripcion": "Zelda para Nintendo Switch" }
+]
